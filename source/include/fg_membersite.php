@@ -685,10 +685,10 @@ class FGMembersite
         $scriptFolder = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on')) ? 'https://' : 'http://';
 
         $urldir ='';
-        $pos = strrpos($_SERVER['REQUEST_URI'],'/');
+        $pos = strrpos($_SERVER['REQUEST_URL'],'/');
         if(false !==$pos)
         {
-            $urldir = substr($_SERVER['REQUEST_URI'],0,$pos);
+            $urldir = substr($_SERVER['REQUEST_URL'],0,$pos);
         }
 
         $scriptFolder .= $_SERVER['HTTP_HOST'].$urldir;
